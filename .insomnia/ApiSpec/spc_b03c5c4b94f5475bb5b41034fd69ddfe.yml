@@ -1,7 +1,7 @@
 _id: spc_b03c5c4b94f5475bb5b41034fd69ddfe
 type: ApiSpec
 parentId: wrk_233425fcd22b47b2a059fb0c8da3adcb
-modified: 1654093047290
+modified: 1654109675167
 created: 1654088264543
 fileName: termapi-spec.yaml
 contents: >-
@@ -54,6 +54,21 @@ contents: >-
         servers:
           - url: https://wttr.in/
             description: provides an implementation of the weather service
+    /whats-my-ip:
+      get:
+        summary: Gets your public IP address
+        description: "Gets your public IP address"
+        operationId: whats_my_ip
+        responses:
+          "200":
+            description: successful operation
+            content:
+               application/text:
+                 schema:
+                   type: string
+        servers:
+           - url: https://ifconfig.me
+             description: obtain ip address from ifconfig.me
   servers:
     - url: https://localhost:8000
 contentType: yaml
