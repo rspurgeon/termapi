@@ -1,3 +1,0 @@
-[submodule "learn-terraform-provision-eks-cluster"]
-	path = learn-terraform-provision-eks-cluster
-	url = git@github.com:rspurgeon/learn-terraform-provision-eks-cluster.git
