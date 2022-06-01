@@ -1,7 +1,7 @@
 _id: spc_b03c5c4b94f5475bb5b41034fd69ddfe
 type: ApiSpec
 parentId: wrk_233425fcd22b47b2a059fb0c8da3adcb
-modified: 1654110100528
+modified: 1654110416114
 created: 1654088264543
 fileName: termapi-spec.yaml
 contents: >-
@@ -55,7 +55,6 @@ contents: >-
           - url: https://wttr.in/
             description: provides an implementation of the weather service
     /whats-my-ip:
-      x-kong-host: ifconfig.me
       get:
         summary: Gets your public IP address
         description: "Gets your public IP address"
@@ -72,4 +71,5 @@ contents: >-
              description: obtain ip address from ifconfig.me
   servers:
     - url: https://localhost:8000
+    - url: http://test.com
 contentType: yaml
