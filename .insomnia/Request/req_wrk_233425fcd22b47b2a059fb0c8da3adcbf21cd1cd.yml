@@ -1,0 +1,21 @@
+_id: req_wrk_233425fcd22b47b2a059fb0c8da3adcbf21cd1cd
+type: Request
+parentId: wrk_233425fcd22b47b2a059fb0c8da3adcb
+modified: 1654091236675
+created: 1654091034124
+url: "{{ base_url }}/weather"
+name: Gets the current weather at the requesters location
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1654091034124
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
