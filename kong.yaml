@@ -45,6 +45,28 @@ services:
     strip_path: true
   write_timeout: 60000
 - connect_timeout: 60000
+  host: icanhazdadjoke.com
+  name: icanhazdadjoke.com
+  port: 443
+  protocol: https
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    id: fd3734bd-3777-451a-bbbd-c5b87e5f7387
+    path_handling: v0
+    paths:
+    - /dadjoke
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
+- connect_timeout: 60000
   host: ifconfig.me
   name: ifconfig.me
   port: 80
