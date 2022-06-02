@@ -1,6 +1,29 @@
 _format_version: "1.1"
 services:
 - connect_timeout: 60000
+  host: qrenco.de
+  name: qr
+  path: /
+  port: 443
+  protocol: https
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    id: 07aeae80-2be7-4230-842c-7c6e2df0d598
+    path_handling: v0
+    paths:
+    - /qr
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
+- connect_timeout: 60000
   host: wttr.in
   name: weather
   path: /
