@@ -1,0 +1,47 @@
+_format_version: "1.1"
+services:
+- connect_timeout: 60000
+  host: wttr.in
+  name: weather
+  path: /
+  port: 443
+  protocol: https
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    id: 8ecb5828-e829-4f0c-bc2f-187e45ec32b7
+    path_handling: v0
+    paths:
+    - /weather
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
+- connect_timeout: 60000
+  host: ifconfig.me
+  name: whats-my-ip
+  port: 80
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    id: c578cc4e-ba96-4f34-842c-867537618e29
+    path_handling: v0
+    paths:
+    - /whats-my-ip
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
