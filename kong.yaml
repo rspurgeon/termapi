@@ -12,7 +12,7 @@ services:
     id: 18e91c50-825a-4938-af75-a3988e53793b
     path_handling: v0
     paths:
-    - /starwars
+    - /star-wars
     preserve_host: false
     protocols:
     - http
@@ -56,7 +56,7 @@ services:
     id: fd3734bd-3777-451a-bbbd-c5b87e5f7387
     path_handling: v0
     paths:
-    - /dadjoke
+    - /dad-joke
     preserve_host: false
     protocols:
     - http
