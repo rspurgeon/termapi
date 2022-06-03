@@ -11,6 +11,7 @@ services:
   - https_redirect_status_code: 426
     id: 18e91c50-825a-4938-af75-a3988e53793b
     path_handling: v0
+    name: star-wars
     paths:
     - /star-wars
     preserve_host: false
@@ -33,6 +34,7 @@ services:
   - https_redirect_status_code: 426
     id: 66a4f5cf-e54c-47e6-895f-6d84789fcb7c
     path_handling: v0
+    name: covid
     paths:
     - /covid
     preserve_host: false
@@ -55,6 +57,7 @@ services:
   - https_redirect_status_code: 426
     id: fd3734bd-3777-451a-bbbd-c5b87e5f7387
     path_handling: v0
+    name: dad-joke
     paths:
     - /dad-joke
     preserve_host: false
@@ -77,6 +80,7 @@ services:
   - https_redirect_status_code: 426
     id: c578cc4e-ba96-4f34-842c-867537618e29
     path_handling: v0
+    name: whats-my-ip
     paths:
     - /whats-my-ip
     preserve_host: false
@@ -99,6 +103,7 @@ services:
   - https_redirect_status_code: 426
     id: e71291bc-c388-467b-8a46-cf40089450dd
     path_handling: v0
+    name: mock
     paths:
     - /mock
     preserve_host: false
@@ -122,6 +127,7 @@ services:
   - https_redirect_status_code: 426
     id: 07aeae80-2be7-4230-842c-7c6e2df0d598
     path_handling: v0
+    name: qr
     paths:
     - /qr
     preserve_host: false
@@ -145,6 +151,7 @@ services:
   - https_redirect_status_code: 426
     id: 2d1ae436-173b-40df-8df8-e7d6a9299587
     path_handling: v0
+    name: btc
     paths:
     - /btc
     preserve_host: false
@@ -168,6 +175,7 @@ services:
   - https_redirect_status_code: 426
     id: 8ecb5828-e829-4f0c-bc2f-187e45ec32b7
     path_handling: v0
+    name: weather
     paths:
     - /weather
     preserve_host: false
