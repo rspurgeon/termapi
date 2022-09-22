@@ -1,0 +1,75 @@
+_id: spc_1650496e352f452590f4094e9ab6536d
+type: ApiSpec
+parentId: wrk_19a7101618af433fb79c3e0cf6384572
+modified: 1663857558034
+created: 1663857480056
+fileName: termapi.yaml
+contents: >
+  openapi: 3.0.0
+
+  info:
+    description: "This service aggregates other 'terminal friendly' services."
+    version: 0.0.1
+    title: TermAPI
+    contact:
+      url: https://github.com/rspurgeon/termapi
+    license:
+      name: Apache 2.0
+      url: http://www.apache.org/licenses/LICENSE-2.0.html
+  servers:
+    - url: https://localhost:8000
+  paths:
+    /weather:
+      get:
+        summary: Gets the current weather at the requesters location
+        description: "Gets the current weather at the current location obtained from the requestors IP address. Upstream service provided by the very cool https://github.com/chubin/wttr.in"
+        operationId: weather_get
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/text:
+                schema:
+                  type: string
+        servers:
+          - url: https://wttr.in/
+            description: provides an implementation of the weather service
+    /weather/{location}:
+      get:
+        summary: Gets the current weather by a specified location
+        description: "Gets the current weather at a specified location. Upstream service provided by the very cool https://github.com/chubin/wttr.in"
+        operationId: weather_get_by_location
+        parameters:
+          - name: location
+            in: path
+            description: Specifies the location of the weather to obtain
+            required: true
+            schema:
+              type: string
+        responses:
+          "200":
+            description: successful operation
+            content:
+              application/text:
+                schema:
+                  type: string
+        servers:
+          - url: https://wttr.in/
+            description: provides an implementation of the weather service
+    /whats-my-ip:
+      x-kong-name: whats-my-ip
+      get:
+        summary: Gets your public IP address
+        description: "Gets your public IP address"
+        operationId: whats_my_ip
+        responses:
+          "200":
+            description: successful operation
+            content:
+               application/text:
+                 schema:
+                   type: string
+        servers:
+           - url: https://ifconfig.me
+             description: obtain ip address from ifconfig.me
+contentType: yaml
